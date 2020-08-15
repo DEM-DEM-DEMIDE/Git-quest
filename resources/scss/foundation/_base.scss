@@ -1,0 +1,89 @@
+$breakpoints: ( 'sm': 'screen and (max-width: 375px)', // 'md': 'screen and (max-width: 768px)',
+// 'lg': 'screen and (max-width: 1000px)',
+// 'xl': 'screen and (max-width: 1200px)',
+) !default;
+
+@mixin mq($breakpoint: sm) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+html {
+    font-size: $font-size-base;
+    width: 100%;
+    line-height: 1.6;
+    letter-spacing: 0.1em;
+    overflow-x: hidden;
+    height: 100%;
+   
+    @include mq() {
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+body {
+    font-size: $font-size_s; //16px
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    @include mq() {
+        min-height: 100vh;
+        height: 100vh;
+    }
+}
+
+h1 {
+    font-size: $font-size_xl;
+    padding: $space-size-m;
+}
+
+h2 {
+    font-size: $font-size_l;
+    padding: $space-size-s;
+}
+
+p {
+    font-size: $font-size_s;
+    padding: 0.6rem;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: rgba(66, 63, 63, 0.8);
+    text-decoration: none;
+    transition: .3s;
+    -webkit-font-smoothing: antialiased;
+  
+}
+
+a:hover {
+    color: rgb(42, 41, 41);
+}
+
+button,
+button::after {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+button,
+button:focus {
+    outline: none;
+}
+
+a.no-color-change {
+    &:active {
+        color: rgb(70, 46, 204);
+    }
+}
+
+a.no-color-change {
+    &:link {
+        color: rgb(70, 46, 204);
+        background: rgb(255, 255, 255);
+    }
+}
+
