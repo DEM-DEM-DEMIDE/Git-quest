@@ -1,0 +1,48 @@
+.c-card {
+  border-radius: 10px;
+  &-body {
+    background: white;
+    height: 190px;
+    border-bottom: 3px solid greenyellow;
+    line-height: 100px;
+  }
+  &-title {
+    text-align: center;
+  }
+  &-text {
+    font-weight: 900;
+    text-align: center;
+    font-size: 24px;
+    padding-top: 30px;
+    
+
+        
+    }
+    &-answer {
+        margin-top: 40px;
+        display: none;
+        &-sutext {
+            text-align: center;
+            background: rgb(177, 224, 242,0.8);
+            padding: 10px;
+            font-weight: 600;
+
+        }
+        &-misstext {
+            text-align: center;
+            background: rgba(242, 178, 177, 0.8);
+            padding: 10px;
+            font-weight: 600;
+
+        }
+    }
+    &-footer{
+      padding: 30px;
+      line-height: 1.3em;
+      background: white;
+    }
+   
+}
+.block{
+  display: block;
+}

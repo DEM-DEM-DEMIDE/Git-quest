@@ -8,11 +8,18 @@ use Illuminate\Http\Request;
 class QuestionController extends Controller
 {
 
-    public function top()
+    public function Top()
 
     {
 
-
         return view('top');
+    }
+
+
+    public function SampleQuest()
+
+    {
+
+        return view('sample');
     }
 }
