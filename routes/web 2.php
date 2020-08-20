@@ -11,7 +11,6 @@
 |
 */
 
-Route::get('/', 'QuestionController@Top')->name('top');
-Route::get('/sample/quest', 'QuestionController@SampleQuest')->name('sample');
+Route::get('/', 'QuestionController@top')->name('top');
 
 Auth::routes();
